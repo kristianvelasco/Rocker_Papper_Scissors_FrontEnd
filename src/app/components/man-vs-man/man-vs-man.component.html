@@ -1,0 +1,103 @@
+
+<app-loading class="m-5" *ngIf="loading"></app-loading>
+
+<div class="container d-flex">
+    <div *ngIf="!_resultTable" class="container-fluid">
+
+            <div class="row justify-content-center align-self-center">
+                <div *ngIf="error" class="alert alert-danger animated fadeIn">
+                    <h3>Error</h3>
+                    <p>
+                        {{ mensajeError }}
+                    </p>
+                </div>
+                </div>
+
+      <!-- Player 1 -->
+
+          <div class="row justify-content-center align-self-center">
+            <div class="">
+                <input type="text" #txtPlayerName1  placeholder="Player one name" >
+                <h5 > Choose your weapon: </h5>
+                <div  class="row">
+                  <img #rock (click)="playerOne(0)" title="Rock" class="hand" src="../../../assets/hand-rock-solid.svg">
+                  <img #paper (click)="playerOne(1)" title="Paper" class="hand" src="../../../assets/hand-paper-solid.svg">
+                  <img #scissors (click)="playerOne(2)" title="Scissors" class="hand" src="../../../assets/hand-scissors-solid.svg">
+              </div>     
+            </div>
+            <!-- Player 2 -->
+            <div class="">
+                <input type="text" #txtPlayerName2  placeholder="Player two name"> 
+                <h5> Choose your weapon: </h5>   
+                <div  class="row">
+                  <img #rock (click)="playerTwo(0)" title="Rock" class="hand" src="../../../assets/hand-rock-solid.svg">
+                  <img #paper (click)="playerTwo(1)" title="Paper" class="hand" src="../../../assets/hand-paper-solid.svg">
+                  <img #scissors (click)="playerTwo(2)" title="Scissors" class="hand" src="../../../assets/hand-scissors-solid.svg">
+              </div>     
+            </div>
+          </div>
+
+           <!-- Result -->
+  <div class="row justify-content-center align-self-center">
+      <div class="col">
+        <div *ngIf="_result" class="alert alert-success animated fadeIn">
+        <h3>Result Game</h3>
+          <p>
+          {{ _messageresult }}
+          <img #rockm *ngIf="weapon==0" title="Rock" class="hand" src="../../../assets/hand-rock-solid.svg">
+          <img #paperm *ngIf="weapon==1" title="Paper" class="hand" src="../../../assets/hand-paper-solid.svg">
+          <img #scissorsm *ngIf="weapon==2" title="Scissors" class="hand" src="../../../assets/hand-scissors-solid.svg">
+          </p>
+        </div>
+      </div>
+    </div>
+      
+  
+ 
+    </div>
+
+    <div *ngIf="_resultTable" class="container d-flex"> 
+        <div  class="row justify-content-center align-self-center">
+            <button (click)="Reset()" class="puntero button">Play Again</button>
+        </div>
+          <div class="row justify-content-center align-self-center">
+              
+              <table class="tablePPT">
+                  <tr>
+                    <th>
+                     Round
+                    </th>
+                    <th>
+                      Winner
+                    </th>
+                    <th>
+                        Weapon
+                    </th>
+                  </tr>
+              </table>
+              <table class="tablePPT" *ngFor="let char of gamesSummary">
+                
+                  <tr>
+                    <th>
+                      {{char.Round}}
+                    </th>
+                    <th>
+                        {{char.NameWinPlayer}}
+                    </th>
+                    <th *ngIf="char.Weapon==0">
+                        <img  title="Rock" class="hand" src="../../../assets/hand-rock-solid.svg">
+                    </th>
+                    <th *ngIf="char.Weapon==1">
+                        <img  title="Paper" class="hand" src="../../../assets/hand-paper-solid.svg">
+                    </th>
+                    <th *ngIf="char.Weapon==2">
+                        <img  title="Scissors" class="hand" src="../../../assets/hand-scissors-solid.svg">
+                    </th>
+                  </tr>
+                </table>
+                
+          </div>
+        </div>
+        
+
+  </div>

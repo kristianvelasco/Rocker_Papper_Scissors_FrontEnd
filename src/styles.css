@@ -1,0 +1,133 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    background-color: silver;
+    color: black !important;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+hr {
+    border-color: white;
+}
+
+h3{
+    margin-top: 70px;
+}
+div{
+
+    display: inline-block;
+    align-content: center;
+    
+}
+.box1 {
+    display: inline-block;
+    padding: 10px;
+    margin-bottom: 100px; 
+    text-align: justify;
+    margin: 0px 80px 0px 0px;
+    border: 1px solid silver;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+.box2 {
+    display: inline-block;
+    padding: 10px;
+    text-align: justify;
+    margin-top: 100px; 
+    border: 1px solid silver;
+    border-radius: 4px;
+}
+
+.puntero {
+    cursor: pointer;
+}
+
+.img-circle {
+    border-radius: 100%;
+    width: 150px;
+}
+
+.card-title,
+.card-text {
+    color: black;
+}
+
+.badge {
+    margin-left: 5px;
+}
+
+.btn-outline-success {
+    margin-left: 5px;
+}
+
+.img-thumb {
+    width: 50px;
+    height: 50px;
+}
+
+/* Animaciones */
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fast {
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+.button {
+    background-color: rgb(6, 119, 172);
+    border: none;
+    font-size: 28px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 150px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+
+  .hand{
+      width: 60px;
+      cursor: pointer;
+  }
+
+  input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+.tablePPT{
+
+    width: 60%;
+    border: 1px solid lightgray;
+    white-space: normal;
+}

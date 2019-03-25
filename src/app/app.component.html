@@ -1,0 +1,28 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container d-flex ">
+    <div class="row justify-content-center align-self-center">
+  <h3>
+    Welcome to {{ title }}!
+    <img  (click)="BackButton()" title="Back to Home" class="puntero" src="../assets/backspace-24px.svg">
+  </h3>
+
+  <div [hidden]="StartGame" class="div">
+    <div class="box1">
+       <img width="210" height="227" alt="Angular Logo" src="../assets/ManVsMan.jpg"> 
+      <h2>Man VS Man</h2>
+      <button (click)="verManvsMan()" class="puntero button">Play</button>
+  </div>
+  
+  <div [hidden]="StartGame" class="box2">
+       <img width="210" height="227" alt="Angular Logo" src="../assets/ManVsMachine.jpg">
+    <h2>Man Vs Machine</h2>
+    <button (click)="verManvsMachine()" class="puntero button">Play</button>
+  </div>
+
+  </div>
+  
+</div>
+</div>
+<div class="container m-5">
+<router-outlet></router-outlet>
+</div>
